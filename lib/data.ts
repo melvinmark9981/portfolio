@@ -40,6 +40,7 @@ export type Project = {
   tech: string[];
   description: string;
   github: string;
+  demo?: string;
   tag: string;
   featured?: boolean;
 };
@@ -51,6 +52,7 @@ export const projects: Project[] = [
     description:
       "AI-powered semiconductor wafer defect classification system. Hybrid CNN with Squeeze-and-Excitation attention blocks trained on the WM811K dataset (811,457 samples, 9 defect classes). Achieved 95.74% accuracy and 83.88% Macro F1 — outperforming ResNet50 and EfficientNet-B3.",
     github: "https://github.com/melvinmark9981/wafer-defect-detection",
+    demo: "https://waferdemo9981.streamlit.app/",
     tag: "Featured · Semiconductor AI",
     featured: true,
   },
@@ -60,6 +62,7 @@ export const projects: Project[] = [
     description:
       "Real-time IoT sensor monitoring dashboard for 5 Malaysian cities (KL, JB, Penang, KK, Kuching) with Z-score anomaly detection and live heatmaps.",
     github: "https://github.com/melvinmark9981/malaysia-smart-city-dashboard",
+    demo: "https://malaysia-smart-city-dashboard-3bdkkrjefxll5scvbkdms9.streamlit.app/",
     tag: "Smart City · IoT",
   },
   {
@@ -68,6 +71,7 @@ export const projects: Project[] = [
     description:
       "End-to-end AI system predicting Remaining Useful Life (RUL) of industrial equipment using the NASA CMAPSS dataset via an LSTM deep-learning model.",
     github: "https://github.com/melvinmark9981/predictive-maintenance-cmapss",
+    demo: "https://predictive-maintenance-cmapss-1.streamlit.app/",
     tag: "Industry 4.0 · Manufacturing",
   },
   {
@@ -76,15 +80,8 @@ export const projects: Project[] = [
     description:
       "Geospatial analytics dashboard identifying underserved 5G coverage areas across Peninsular Malaysia with interactive maps and state-level gap scoring.",
     github: "https://github.com/melvinmark9981/5g-coverage-gap-analyser",
+    demo: "https://5g-coverage-gap-analyser-a3t273jbbeuwwfgdau3g7h.streamlit.app/",
     tag: "5G · Data Analytics",
-  },
-  {
-    title: "AI Policy Brief Generator",
-    tech: ["Python", "Streamlit", "Claude API"],
-    description:
-      "Full-stack AI document processing app that ingests government policy documents and generates structured briefs using the Anthropic Claude API structured outputs.",
-    github: "https://github.com/melvinmark9981/ai-policy-brief-generator",
-    tag: "AI · NLP · Government Tech",
   },
   {
     title: "English–Spanish Neural Translation System",

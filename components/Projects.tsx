@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Star } from "lucide-react";
+import { ExternalLink, Github, Star } from "lucide-react";
 import Reveal from "./Reveal";
 import { projects } from "@/lib/data";
 
@@ -14,17 +14,14 @@ export default function Projects() {
           <h2 className="section-title">Featured Projects</h2>
           <p className="mt-3 max-w-2xl text-slate-400">
             Production-ready AI and data-science systems — each with a live GitHub
-            repository.
+            repository, most with a live demo.
           </p>
         </Reveal>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {projects.map((p, i) => (
-            <motion.a
+            <motion.div
               key={p.title}
-              href={p.github}
-              target="_blank"
-              rel="noreferrer"
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -46,13 +43,18 @@ export default function Projects() {
                   {p.featured && <Star size={12} className="fill-accent" />}
                   {p.tag}
                 </span>
-                <Github
-                  size={20}
-                  className="text-slate-500 transition-colors group-hover:text-white"
-                />
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${p.title} on GitHub`}
+                  className="text-slate-500 transition-colors hover:text-white"
+                >
+                  <Github size={20} />
+                </a>
               </div>
 
-              <h3 className="text-xl font-bold text-white group-hover:text-accent">
+              <h3 className="text-xl font-bold text-white transition-colors group-hover:text-accent">
                 {p.title}
               </h3>
 
@@ -70,7 +72,30 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-            </motion.a>
+
+              <div className="mt-5 flex flex-wrap gap-3">
+                {p.demo && (
+                  <a
+                    href={p.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg bg-navy-600 px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-navy-500 hover:shadow-glow"
+                  >
+                    <ExternalLink size={16} />
+                    Live Demo
+                  </a>
+                )}
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-ink-border bg-ink/60 px-4 py-2 text-sm font-semibold text-slate-200 transition-all hover:border-accent/60 hover:text-white"
+                >
+                  <Github size={16} />
+                  GitHub
+                </a>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
