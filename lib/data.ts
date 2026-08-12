@@ -25,7 +25,7 @@ export const about = {
     "SQL",
     "Streamlit",
     "React",
-    "Hugging Face",
+    "TensorFlow",
     "Plotly",
   ],
 };
@@ -82,14 +82,6 @@ export const projects: Project[] = [
     demo: "https://5g-coverage-gap-analyser-a3t273jbbeuwwfgdau3g7h.streamlit.app/",
     image: "/screenshots/5g.png",
     tag: "5G · Data Analytics",
-  },
-  {
-    title: "English–Spanish Neural Translation System",
-    tech: ["Python", "mBART-50", "Whisper ASR", "gTTS", "Gradio"],
-    description:
-      "End-to-end speech-to-speech translation pipeline fine-tuned on the OPUS-100 EN-ES dataset. Achieved BLEU 27.81–28.44 — a 34% improvement over base mBART-50.",
-    github: "https://github.com/melvinmark9981/NLP_Voice_Translator",
-    tag: "NLP · Machine Translation",
   },
 ];
 
