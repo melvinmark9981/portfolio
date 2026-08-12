@@ -17,12 +17,7 @@ export const profile = {
 };
 
 export const about = {
-  bio: `I'm a final-year BSc Computer Science & Data Science student and AI engineer who
-enjoys taking machine-learning research all the way to a working, deployable product.
-My work spans semiconductor defect detection, industrial predictive maintenance, IoT
-analytics, and NLP — with a focus on models that are accurate, explainable, and
-genuinely useful. I care about clean engineering, real datasets, and results I can
-defend with numbers.`,
+  bio: "I'm a final-year BSc Computer Science & Data Science student and AI engineer who enjoys taking machine-learning research all the way to a working, deployable product. My work spans semiconductor defect detection, industrial predictive maintenance, IoT analytics, and NLP, with a focus on models that are accurate, explainable, and genuinely useful. I care about clean engineering, real datasets, and results I can defend with numbers.",
   skills: [
     "Python",
     "PyTorch",
