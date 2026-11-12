@@ -30,8 +30,8 @@ export default function Contact() {
           <p className="section-eyebrow">Contact</p>
           <h2 className="section-title">Let&apos;s work together</h2>
           <p className="mt-3 max-w-2xl text-slate-400">
-            Open to Professional Attachment opportunities from September 2026, and
-            happy to talk about AI, data science, and applied ML.
+            Open to full-time roles from early 2027, and happy to talk about AI,
+            data science, and applied ML.
           </p>
         </Reveal>
 

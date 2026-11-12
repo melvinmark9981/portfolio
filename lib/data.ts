@@ -11,13 +11,14 @@ export const profile = {
   linkedin: "https://linkedin.com/in/melvinmarkmichael",
   github: "https://github.com/melvinmark9981",
   location: "Johor Bahru, Malaysia",
-  availability: "Available for Professional Attachment (PA): September 2026",
+  availability: "Seeking full-time roles from early 2027",
+  currentRole: "Currently an Equipment Engineer Intern at Western Digital",
   resume: "/resume.pdf",
   photo: "/profile.jpg",
 };
 
 export const about = {
-  bio: "I'm a final-year BSc Computer Science & Data Science student and AI engineer who enjoys taking machine-learning research all the way to a working, deployable product. My work spans semiconductor defect detection, industrial predictive maintenance, IoT analytics, and NLP, with a focus on models that are accurate, explainable, and genuinely useful. I care about clean engineering, real datasets, and results I can defend with numbers.",
+  bio: "I'm a final-year BSc Computer Science & Data Science student and AI engineer, currently working as an Equipment Engineer Intern at Western Digital. I enjoy taking machine-learning research all the way to a working, deployable product. My work spans semiconductor defect detection, industrial predictive maintenance, IoT analytics, and NLP, with a focus on models that are accurate, explainable, and genuinely useful. I care about clean engineering, real datasets, and results I can defend with numbers.\n\nI'm seeking full-time roles from early 2027 as a Data Scientist, AI/ML Engineer, Data Engineer, or DevOps Engineer in semiconductor or smart manufacturing, based in Singapore or Malacca.",
   skills: [
     "Python",
     "PyTorch",
@@ -27,8 +28,50 @@ export const about = {
     "React",
     "TensorFlow",
     "Plotly",
+    "Three.js",
+    "Apache Kafka",
+    "PLC Programming",
+    "Mitsubishi MX Component",
+    "Digital Twin",
+    "Unity",
+    "Unreal Engine",
+    "Predictive Maintenance",
   ],
 };
+
+export type Experience = {
+  role: string;
+  company: string;
+  location: string;
+  period: string;
+  bullets: string[];
+};
+
+// Newest first.
+export const experience: Experience[] = [
+  {
+    role: "Equipment Engineer Intern",
+    company: "Western Digital",
+    location: "Pasir Gudang, Johor",
+    period: "Oct 2026 – Present",
+    bullets: [
+      "Building a Three.js digital twin of a CMP polishing line (SpeedFam and System Seiko disk-polishing machines) so engineers and management can see machine status live on the factory floor",
+      "Pulling machine data with SQL from local factory servers and streaming it into Apache Kafka",
+      "Engineering features from machine parameters to predict machine failure and downtime (predictive maintenance, in progress)",
+      "Working with PLC programming and Mitsubishi MX Component for machine data communication",
+      "Building simulations with AI coding agents (Devin, powered by Claude)",
+    ],
+  },
+  {
+    role: "Founder & Operations Director",
+    company: "Dwin Club",
+    location: "Johor Bahru",
+    period: "Jan 2022 – Present",
+    bullets: [
+      "Founded and run an event services company providing crew staffing and concert promotion for 15+ concerts across Malaysia; lead crews and on-site operations.",
+    ],
+  },
+];
 
 export type Project = {
   title: string;

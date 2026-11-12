@@ -1,8 +1,8 @@
 "use client";
 
-import { Download, GraduationCap } from "lucide-react";
+import { Briefcase, Download, GraduationCap } from "lucide-react";
 import Reveal from "./Reveal";
-import { education, profile } from "@/lib/data";
+import { education, experience, profile } from "@/lib/data";
 
 export default function Resume() {
   return (
@@ -13,8 +13,37 @@ export default function Resume() {
           <h2 className="section-title">Education &amp; Experience</h2>
         </Reveal>
 
+        <div className="mt-10 space-y-6">
+        {experience.map((job) => (
+          <Reveal key={`${job.company}-${job.role}`} delay={0.1}>
+            <div className="card overflow-hidden p-8">
+              <div className="flex items-start gap-4">
+                <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-navy-600/70 text-accent">
+                  <Briefcase size={24} />
+                </span>
+                <div>
+                  <h3 className="text-lg font-bold text-white">{job.role}</h3>
+                  <p className="text-navy-200">
+                    {job.company} · {job.location}
+                  </p>
+                  <p className="mt-1 text-sm text-slate-400">{job.period}</p>
+                </div>
+              </div>
+
+              <ul className="mt-6 space-y-3">
+                {job.bullets.map((b) => (
+                  <li key={b} className="flex gap-3 leading-relaxed text-slate-300">
+                    <span className="mt-2.5 h-2 w-2 flex-shrink-0 rounded-full bg-accent" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        ))}
+
         <Reveal delay={0.1}>
-          <div className="mt-10 card overflow-hidden">
+          <div className="card overflow-hidden">
             <div className="flex flex-col gap-6 p-8 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-start gap-4">
                 <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-navy-600/70 text-accent">
@@ -43,6 +72,7 @@ export default function Resume() {
             </div>
           </div>
         </Reveal>
+        </div>
       </div>
     </section>
   );

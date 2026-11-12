@@ -50,6 +50,13 @@ export default function Hero() {
             {profile.tagline}
           </motion.p>
 
+          <motion.p
+            variants={item}
+            className="mt-3 max-w-xl text-sm font-medium text-slate-300 sm:text-base"
+          >
+            {profile.currentRole}
+          </motion.p>
+
           <motion.div variants={item} className="mt-8 flex flex-wrap gap-4">
             <a
               href="#projects"
