@@ -59,7 +59,7 @@ export const experience: Experience[] = [
       "Pulling machine data with SQL from local factory servers and streaming it into Apache Kafka",
       "Engineering features from machine parameters to predict machine failure and downtime (predictive maintenance, in progress)",
       "Working with PLC programming and Mitsubishi MX Component for machine data communication",
-      "Building simulations with AI coding agents (Devin, powered by Claude)",
+      "Building simulations with AI coding agents",
     ],
   },
   {
@@ -131,7 +131,7 @@ export const projects: Project[] = [
 export const education = {
   degree: "BSc Computer Science & Data Science",
   school: "Raffles University Malaysia",
-  period: "2023 – 2026",
+  period: "Jan 2022 – Jan 2027",
   summary:
     "Final-year undergraduate specialising in artificial intelligence, deep learning, and applied data science, with a capstone in semiconductor defect detection.",
 };
