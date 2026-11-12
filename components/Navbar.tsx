@@ -25,6 +25,7 @@ export default function Navbar() {
 
   return (
     <motion.header
+      data-sr-skip
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}

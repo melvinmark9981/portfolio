@@ -10,6 +10,18 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Swarm Rebuild: the inline boot script in <head> sets .sr-boot for first-time desktop visitors.
+   It paints an opaque cover over the (fully rendered) page until the effect's own scan screen
+   takes over. It is removed on hand-over, and by a 4s failsafe. No class, no cover. */
+html.sr-boot::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 2147482999;
+  background: #0a0f1e;
+  pointer-events: none;
+}
+
 body {
   @apply bg-ink text-slate-200 antialiased;
   background-image: radial-gradient(

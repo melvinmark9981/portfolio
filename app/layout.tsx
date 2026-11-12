@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { profile } from "@/lib/data";
+import { BOOT_SCRIPT, NOSCRIPT_CSS } from "@/lib/swarm-rebuild-boot";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -26,6 +27,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        {/* Swarm Rebuild boot (see lib/swarm-rebuild-boot.ts): never hides anything in the HTML */}
+        <script dangerouslySetInnerHTML={{ __html: BOOT_SCRIPT }} />
+        <noscript dangerouslySetInnerHTML={{ __html: `<style>${NOSCRIPT_CSS}</style>` }} />
+      </head>
       <body className="font-sans">{children}</body>
     </html>
   );
